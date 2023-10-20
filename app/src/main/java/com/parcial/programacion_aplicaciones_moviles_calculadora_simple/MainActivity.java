@@ -13,13 +13,15 @@ import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
 
-    private float num1, num2;
     private TextView result;
+    private ArithmeticOperations arithmeticOperations;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        arithmeticOperations = new ArithmeticOperations();
 
         Button add = findViewById(R.id.add);
         Button subtract = findViewById(R.id.subtract);
@@ -57,8 +59,8 @@ public class MainActivity extends AppCompatActivity {
             return false;
         }
 
-        num1 = Float.parseFloat(s1);
-        num2 = Float.parseFloat(s2);
+        arithmeticOperations.setNum1(Float.parseFloat(s1));
+        arithmeticOperations.setNum2(Float.parseFloat(s2));
 
         return true;
     }
@@ -67,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
     public void onClickSum(View view) {
 
         if (getNumbers()) {
-            result.setText(Float.toString(num1 + num2));
+            result.setText(Float.toString(arithmeticOperations.sum()));
         }
 
     }
@@ -76,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
     public void onClickSubtract(View view) {
 
         if (getNumbers()) {
-            result.setText(Float.toString(num1 - num2));
+            result.setText(Float.toString(arithmeticOperations.subtract()));
         }
 
     }
@@ -85,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
     public void onClickMultiply(View view) {
 
         if (getNumbers()) {
-            result.setText(Float.toString(num1 * num2));
+            result.setText(Float.toString(arithmeticOperations.multiply()));
         }
 
     }
@@ -93,12 +95,12 @@ public class MainActivity extends AppCompatActivity {
     @SuppressLint("SetTextI18n")
     public void onClickDivide(View view) {
 
-        if (Objects.equals(num2, 0.0f)) {
+        if (Objects.equals(arithmeticOperations.getNum2(), 0.0f)) {
             result.setText("No se puede dividir entre 0");
         }
 
-        if (getNumbers() & !Objects.equals(num2, 0.0f)) {
-            result.setText(Float.toString(num1 / num2));
+        if (getNumbers() && !Objects.equals(arithmeticOperations.getNum2(), 0.0f)) {
+            result.setText(Float.toString(arithmeticOperations.divide()));
         }
 
     }
