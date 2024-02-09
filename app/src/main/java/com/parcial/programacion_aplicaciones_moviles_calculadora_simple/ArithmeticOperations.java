@@ -32,6 +32,12 @@ public class ArithmeticOperations {
         return num1 * num2;
     }
 
+    public float multiplyRecursively(float multiplying, float multiplier) {
+        if (multiplier > 0) return multiplying + multiplyRecursively(multiplying, multiplier - 1);
+        if (multiplier < 0) return -multiplyRecursively(multiplying, -multiplier);
+        return 0;
+    }
+
     public Float divide() {
         return num1 / num2;
     }

@@ -87,7 +87,8 @@ public class MainActivity extends AppCompatActivity {
     public void onClickMultiply(View view) {
 
         if (getNumbers()) {
-            result.setText(Float.toString(arithmeticOperations.multiply()));
+            // result.setText(Float.toString(arithmeticOperations.multiply()));
+            result.setText(Float.toString(arithmeticOperations.multiplyRecursively(arithmeticOperations.getNum1(), arithmeticOperations.getNum2())));
         }
 
     }

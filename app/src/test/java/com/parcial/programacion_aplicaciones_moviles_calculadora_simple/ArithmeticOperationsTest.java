@@ -36,6 +36,11 @@ public class ArithmeticOperationsTest {
     }
 
     @Test
+    public void multiplyRecursively() {
+        assertEquals(15.0f, arithmeticOperations.multiplyRecursively(3f, 5f), 0.0f);
+    }
+
+    @Test
     public void divide() {
         arithmeticOperations.setNum1(1.0f);
         arithmeticOperations.setNum2(2.0f);
