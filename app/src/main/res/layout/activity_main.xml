@@ -14,16 +14,14 @@
         android:id="@+id/textView3"
         android:layout_width="334dp"
         android:layout_height="47dp"
-        android:layout_marginStart="114dp"
-        android:layout_marginTop="58dp"
-        android:layout_marginEnd="103dp"
-        android:layout_marginBottom="502dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="39dp"
         android:scrollbarSize="30dp"
         android:text="Calculadora Simple"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -32,69 +30,29 @@
         android:id="@+id/textView"
         android:layout_width="360dp"
         android:layout_height="21dp"
-        android:layout_marginStart="71dp"
-        android:layout_marginEnd="71dp"
         android:text="Número 1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.549"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.267" />
+        tools:layout_editor_absoluteX="21dp"
+        tools:layout_editor_absoluteY="190dp" />
 
     <EditText
         android:id="@+id/num1"
         android:layout_width="364dp"
         android:layout_height="28dp"
-        android:layout_marginStart="71dp"
-        android:layout_marginTop="70dp"
-        android:layout_marginEnd="71dp"
-        android:layout_marginBottom="416dp"
         android:background="@android:color/white"
         android:ems="10"
         android:inputType="number"
         android:onClick="clearTextNum1"
         android:singleLine="false"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.526"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.649" />
+        tools:layout_editor_absoluteX="21dp"
+        tools:layout_editor_absoluteY="211dp" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="360dp"
         android:layout_height="21dp"
-        android:layout_marginStart="71dp"
-        android:layout_marginEnd="71dp"
         android:text="Número 2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.549"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.349" />
-
-    <EditText
-        android:id="@+id/num2"
-        android:layout_width="364dp"
-        android:layout_height="28dp"
-        android:layout_marginStart="71dp"
-        android:layout_marginTop="70dp"
-        android:layout_marginEnd="71dp"
-        android:layout_marginBottom="416dp"
-        android:background="@android:color/white"
-        android:ems="10"
-        android:inputType="number"
-        android:onClick="clearTextNum1"
-        android:singleLine="false"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.526"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.917" />
+        tools:layout_editor_absoluteX="21dp"
+        tools:layout_editor_absoluteY="248dp" />
 
     <!-- Edit Text View to input the values -->
 
@@ -102,69 +60,59 @@
 
     <!-- Text View to display result -->
 
-    <Button
-        android:id="@+id/add"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="+"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.356"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.452" />
+    <EditText
+        android:id="@+id/num2"
+        android:layout_width="364dp"
+        android:layout_height="28dp"
+        android:background="@android:color/white"
+        android:ems="10"
+        android:inputType="number"
+        android:onClick="clearTextNum1"
+        android:singleLine="false"
+        tools:layout_editor_absoluteX="21dp"
+        tools:layout_editor_absoluteY="269dp" />
 
     <Button
         android:id="@+id/subtract"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="-"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.665"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.452" />
+        tools:layout_editor_absoluteX="215dp"
+        tools:layout_editor_absoluteY="318dp" />
 
     <Button
-        android:id="@+id/multiply"
+        android:id="@+id/add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="*"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.356"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.541" />
+        android:text="+"
+        tools:layout_editor_absoluteX="104dp"
+        tools:layout_editor_absoluteY="318dp" />
 
     <Button
         android:id="@+id/divide"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="/"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.665"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.541" />
+        tools:layout_editor_absoluteX="215dp"
+        tools:layout_editor_absoluteY="382dp" />
+
+    <Button
+        android:id="@+id/multiply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*"
+        tools:layout_editor_absoluteX="104dp"
+        tools:layout_editor_absoluteY="382dp" />
 
     <TextView
         android:id="@+id/result"
         android:layout_width="371dp"
         android:layout_height="68dp"
-        android:layout_marginStart="71dp"
-        android:layout_marginTop="151dp"
-        android:layout_marginEnd="71dp"
         android:background="@android:color/white"
         android:textColorLink="#673AB7"
         android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.566" />
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="455dp" />
 
     <!-- A button to perform 'sum' operation -->
 
