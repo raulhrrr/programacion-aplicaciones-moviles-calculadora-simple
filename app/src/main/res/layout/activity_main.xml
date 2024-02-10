@@ -5,10 +5,34 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#8BC34A"
-    android:backgroundTint="#D1D1D1"
+    android:backgroundTint="#00000000"
     tools:context=".MainActivity">
 
     <!-- Text View to display our basic heading of "calculator"-->
+
+    <Button
+        android:id="@+id/fibonacci"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="104dp"
+        android:text="fibonacci"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/factorial"
+        app:layout_constraintTop_toBottomOf="@+id/divide" />
+
+    <Button
+        android:id="@+id/factorial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="23dp"
+        android:text="factorial"
+        app:layout_constraintEnd_toStartOf="@+id/fibonacci"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/multiply" />
 
     <TextView
         android:id="@+id/textView3"
@@ -44,11 +68,12 @@
         android:layout_height="28dp"
         android:layout_marginStart="21dp"
         android:layout_marginEnd="26dp"
-        android:background="@android:color/white"
+        android:background="#DAD9D9"
         android:ems="10"
         android:inputType="number"
         android:onClick="clearTextNum1"
         android:singleLine="false"
+        android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -77,11 +102,12 @@
         android:layout_height="28dp"
         android:layout_marginStart="21dp"
         android:layout_marginEnd="26dp"
-        android:background="@android:color/white"
+        android:background="#DAD9D9"
         android:ems="10"
         android:inputType="number"
         android:onClick="clearTextNum1"
         android:singleLine="false"
+        android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
@@ -91,7 +117,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="23dp"
-        android:layout_marginTop="21dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="108dp"
         android:text="-"
         app:layout_constraintEnd_toEndOf="parent"
@@ -103,7 +129,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="104dp"
-        android:layout_marginTop="21dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="23dp"
         android:text="+"
         app:layout_constraintEnd_toStartOf="@+id/subtract"
@@ -136,17 +162,20 @@
 
     <TextView
         android:id="@+id/result"
-        android:layout_width="371dp"
-        android:layout_height="68dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="208dp"
-        android:background="@android:color/white"
+        android:layout_width="281dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="140dp"
+        android:background="#DAD9D9"
+        android:textColor="#000000"
         android:textColorLink="#673AB7"
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fibonacci" />
 
     <!-- A button to perform 'sum' operation -->
 

@@ -38,19 +38,14 @@ public class ArithmeticOperations {
         return 0;
     }
 
-    public int factorial(int n, int limit) {
-        if (n == 0) return 1;
-        return limit <= n ? n * factorial(n - 1, limit) : 1;
+    public int factorial(int factorialNumber, int limit) {
+        if (factorialNumber == 0) return 1;
+        return limit <= factorialNumber ? factorialNumber * factorial(factorialNumber - 1, limit) : 0;
     }
 
     public String fibonacci(int start, int end) {
         StringBuilder result = new StringBuilder();
-
-        for (int i = start; i <= end; i++) result.append(fibonacciRecursively(i)).append(", ");
-
-        // Clean the last part of the string
-        result.deleteCharAt(result.length() - 2);
-
+        for (int i = start; i <= end; i++) result.append(fibonacciRecursively(i)).append(i < end ? ", " : "");
         return result.toString();
     }
 

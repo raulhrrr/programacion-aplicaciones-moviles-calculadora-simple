@@ -41,6 +41,16 @@ public class ArithmeticOperationsTest {
     }
 
     @Test
+    public void factorial() {
+        assertEquals(120, arithmeticOperations.factorial(5, 1));
+    }
+
+    @Test
+    public void fibonacci() {
+        assertEquals("0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55", arithmeticOperations.fibonacci(0, 10));
+    }
+
+    @Test
     public void divide() {
         arithmeticOperations.setNum1(1.0f);
         arithmeticOperations.setNum2(2.0f);

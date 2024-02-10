@@ -27,11 +27,15 @@ public class MainActivity extends AppCompatActivity {
         Button subtract = findViewById(R.id.subtract);
         Button multiply = findViewById(R.id.multiply);
         Button divide = findViewById(R.id.divide);
+        Button factorial = findViewById(R.id.factorial);
+        Button fibonacci = findViewById(R.id.fibonacci);
 
         add.setOnClickListener(this::onClickSum);
         subtract.setOnClickListener(this::onClickSubtract);
         multiply.setOnClickListener(this::onClickMultiply);
         divide.setOnClickListener(this::onClickDivide);
+        factorial.setOnClickListener(this::onClickFactorial);
+        fibonacci.setOnClickListener(this::onClickFibonacci);
 
     }
 
@@ -88,7 +92,10 @@ public class MainActivity extends AppCompatActivity {
 
         if (getNumbers()) {
             // result.setText(Float.toString(arithmeticOperations.multiply()));
-            result.setText(Float.toString(arithmeticOperations.multiplyRecursively(arithmeticOperations.getNum1(), arithmeticOperations.getNum2())));
+            result.setText(Float.toString(arithmeticOperations.multiplyRecursively(
+                    arithmeticOperations.getNum1(),
+                    arithmeticOperations.getNum2()
+            )));
         }
 
     }
@@ -109,10 +116,10 @@ public class MainActivity extends AppCompatActivity {
     public void onClickFibonacci(View view) {
 
         if (getNumbers()) {
-            result.setText(Integer.toString(arithmeticOperations.factorial(
+            result.setText(arithmeticOperations.fibonacci(
                     arithmeticOperations.getNum1().intValue(),
                     arithmeticOperations.getNum2().intValue()
-            )));
+            ));
         }
 
     }
