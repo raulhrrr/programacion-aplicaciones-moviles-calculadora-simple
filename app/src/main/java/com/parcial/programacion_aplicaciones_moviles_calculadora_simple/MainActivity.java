@@ -94,6 +94,30 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @SuppressLint("SetTextI18n")
+    public void onClickFactorial(View view) {
+
+        if (getNumbers()) {
+            result.setText(Integer.toString(arithmeticOperations.factorial(
+                    arithmeticOperations.getNum1().intValue(),
+                    arithmeticOperations.getNum2().intValue()
+            )));
+        }
+
+    }
+
+    @SuppressLint("SetTextI18n")
+    public void onClickFibonacci(View view) {
+
+        if (getNumbers()) {
+            result.setText(Integer.toString(arithmeticOperations.factorial(
+                    arithmeticOperations.getNum1().intValue(),
+                    arithmeticOperations.getNum2().intValue()
+            )));
+        }
+
+    }
+
+    @SuppressLint("SetTextI18n")
     public void onClickDivide(View view) {
 
         if (Objects.equals(arithmeticOperations.getNum2(), 0.0f)) {

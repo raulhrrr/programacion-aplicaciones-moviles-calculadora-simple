@@ -38,6 +38,26 @@ public class ArithmeticOperations {
         return 0;
     }
 
+    public int factorial(int n, int limit) {
+        if (n == 0) return 1;
+        return limit <= n ? n * factorial(n - 1, limit) : 1;
+    }
+
+    public String fibonacci(int start, int end) {
+        StringBuilder result = new StringBuilder();
+
+        for (int i = start; i <= end; i++) result.append(fibonacciRecursively(i)).append(", ");
+
+        // Clean the last part of the string
+        result.deleteCharAt(result.length() - 2);
+
+        return result.toString();
+    }
+
+    private int fibonacciRecursively(int n) {
+        return n <= 1 ? n : fibonacciRecursively(n - 1) + fibonacciRecursively(n - 2);
+    }
+
     public Float divide() {
         return num1 / num2;
     }
