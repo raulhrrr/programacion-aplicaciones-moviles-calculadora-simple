@@ -25,8 +25,10 @@ public class MainHistory extends AppCompatActivity {
         historyResult.setText(result.toString());
 
         Button main = findViewById(R.id.mainActivity);
+        Button clean = findViewById(R.id.mainClean);
 
         main.setOnClickListener(v -> startActivity(new Intent(this, MainActivity.class)));
+        clean.setOnClickListener(v -> startActivity(new Intent(this, MainClean.class)));
 
     }
 }
