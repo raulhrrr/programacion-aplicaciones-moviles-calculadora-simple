@@ -1,6 +1,11 @@
 package com.parcial.programacion_aplicaciones_moviles_calculadora_simple;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ArithmeticOperations {
+
+    private static final List<String> history = new ArrayList<>();
 
     private Float num1, num2;
 
@@ -18,6 +23,14 @@ public class ArithmeticOperations {
 
     public void setNum2(Float num2) {
         this.num2 = num2;
+    }
+
+    public static List<String> getHistory() {
+        return history;
+    }
+
+    public static void addCalculation(String operation) {
+        history.add(operation);
     }
 
     public Float sum() {
@@ -40,7 +53,7 @@ public class ArithmeticOperations {
 
     public int factorial(int factorialNumber, int limit) {
         if (factorialNumber == 0) return 1;
-        return limit <= factorialNumber ? factorialNumber * factorial(factorialNumber - 1, limit) : 0;
+        return limit <= factorialNumber ? factorialNumber * factorial(factorialNumber - 1, limit) : 1;
     }
 
     public String fibonacci(int start, int end) {

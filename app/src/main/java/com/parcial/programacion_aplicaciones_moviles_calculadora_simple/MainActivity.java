@@ -1,6 +1,7 @@
 package com.parcial.programacion_aplicaciones_moviles_calculadora_simple;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -9,6 +10,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.Locale;
 import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
@@ -29,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         Button divide = findViewById(R.id.divide);
         Button factorial = findViewById(R.id.factorial);
         Button fibonacci = findViewById(R.id.fibonacci);
+        Button history = findViewById(R.id.mainHistory);
 
         add.setOnClickListener(this::onClickSum);
         subtract.setOnClickListener(this::onClickSubtract);
@@ -36,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
         divide.setOnClickListener(this::onClickDivide);
         factorial.setOnClickListener(this::onClickFactorial);
         fibonacci.setOnClickListener(this::onClickFibonacci);
+
+        history.setOnClickListener(v -> startActivity(new Intent(this, MainHistory.class)));
 
     }
 
@@ -69,11 +74,25 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+    public void addCalculationInHistory(String operation) {
+        ArithmeticOperations.addCalculation(
+                String.format(
+                        Locale.getDefault(),
+                        "%f %s %f = %s",
+                        arithmeticOperations.getNum1(),
+                        operation,
+                        arithmeticOperations.getNum2(),
+                        result.getText()
+                )
+        );
+    }
+
     @SuppressLint("SetTextI18n")
     public void onClickSum(View view) {
 
         if (getNumbers()) {
             result.setText(Float.toString(arithmeticOperations.sum()));
+            addCalculationInHistory("+");
         }
 
     }
@@ -83,6 +102,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (getNumbers()) {
             result.setText(Float.toString(arithmeticOperations.subtract()));
+            addCalculationInHistory("-");
         }
 
     }
@@ -96,6 +116,7 @@ public class MainActivity extends AppCompatActivity {
                     arithmeticOperations.getNum1(),
                     arithmeticOperations.getNum2()
             )));
+            addCalculationInHistory("*");
         }
 
     }
@@ -108,6 +129,7 @@ public class MainActivity extends AppCompatActivity {
                     arithmeticOperations.getNum1().intValue(),
                     arithmeticOperations.getNum2().intValue()
             )));
+            addCalculationInHistory("!");
         }
 
     }
@@ -120,6 +142,7 @@ public class MainActivity extends AppCompatActivity {
                     arithmeticOperations.getNum1().intValue(),
                     arithmeticOperations.getNum2().intValue()
             ));
+            addCalculationInHistory("Fibonacci");
         }
 
     }
@@ -133,6 +156,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (getNumbers() && !Objects.equals(arithmeticOperations.getNum2(), 0.0f)) {
             result.setText(Float.toString(arithmeticOperations.divide()));
+            addCalculationInHistory("/");
         }
 
     }
