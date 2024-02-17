@@ -13,9 +13,11 @@ public class MainClean extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_clean);
 
+        Button clean = findViewById(R.id.cleanHistory);
         Button main = findViewById(R.id.mainActivity2);
         Button history = findViewById(R.id.mainHistory2);
 
+        clean.setOnClickListener(v -> ArithmeticOperations.clearHistory());
         main.setOnClickListener(v -> startActivity(new Intent(this, MainActivity.class)));
         history.setOnClickListener(v -> startActivity(new Intent(this, MainHistory.class)));
 

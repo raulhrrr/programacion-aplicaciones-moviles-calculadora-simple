@@ -25,6 +25,10 @@ public class ArithmeticOperations {
         this.num2 = num2;
     }
 
+    public static void clearHistory() {
+        history.clear();
+    }
+
     public static List<String> getHistory() {
         return history;
     }

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "226867730027",
+    "project_id": "calculadora-simple-24deb",
+    "storage_bucket": "calculadora-simple-24deb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:226867730027:android:1a2b39eaeb6fcea6f7c32e",
+        "android_client_info": {
+          "package_name": "com.parcial.programacion_aplicaciones_moviles_calculadora_simple"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCj1ndaS52FSJ9WuooayT6sn_ARerxcQPg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
