@@ -26,3 +26,36 @@ jobs:
 
     - name: Build with Gradle
       run: ./gradlew build
+
+    - name: Run tests
+      run: ./gradlew test
+
+    - name: Upload test results
+      uses: actions/upload-artifact@v2
+      with:
+        name: test-results
+        path: build/reports/tests
+
+    - name: Upload build results
+      uses: actions/upload-artifact@v2
+      with:
+        name: build-results
+        path: build/reports
+
+    - name: Upload jar
+      uses: actions/upload-artifact@v2
+      with:
+        name: jar
+        path: build/libs
+
+    - name: Upload coverage report
+      uses: actions/upload-artifact@v2
+      with:
+        name: coverage
+        path: build/reports/jacoco/test/html
+
+    - name: Upload logs
+      uses: actions/upload-artifact@v2
+      with:
+        name: logs
+        path: logs
